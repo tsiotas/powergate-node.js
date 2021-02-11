@@ -2,6 +2,15 @@
 This is a fork of  Textile + Node Starter Project [TypeScript-Node-Starter project](https://github.com/microsoft/TypeScript-Node-Starter) 
 
 It's a simple project to test Powergate works with Filecoin architecture (Lotus + IPFS) in localnet
+
+Content in this project includes sections for:
+
+- authenticate with different users at the same time
+- get informations about a User profile (Id, token and balance)
+- send Filecoin between different user addresses
+- get informations about Jobs and Deals
+- Pin a file a seal deals 
+- get information about the file status or download it from the web page
  
 ## Setup
 First of all you need clone the Powergate Docker from here  https://github.com/textileio/powergate/releases in a different directory
