@@ -9,6 +9,8 @@ For this project we used powergate v.2.0.0
 
 Run the powergate docker:
 
+### Run Powergate docker
+
 ---
 make localnet 
 ```
