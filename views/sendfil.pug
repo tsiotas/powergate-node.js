@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div.text-center
+        form(class="form-signin" method="POST" action="/sendfil_do")
+            #error
+                if error
+                    p.text-danger Error!!!
+
+            - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
+            h1(class=h1Classes) Sending FIL to another Address
+
+            //-input address
+            label( for="inputFromAddress" class="sr-only") User Address FROM
+            input(type="text" name="FromAddress" value=`${address0}`   id="inputFromAddress" class="form-control" placeholder="user address" required autofocus)
+
+            //-input address
+            label( for="inputToAddress" class="sr-only") User Address TO
+            input(type="text" name="ToAddress" id="inputToAddress" class="form-control" placeholder="destination user address" required autofocus)
+
+            //-input FIL
+            label(for="inputFIL" class="sr-only") FIL Amount
+            input(type="text" name="FIL" id="inputFIL" class="form-control" placeholder="FIL amount to send" required)
+			
+            //-remember Checkbox
+            //- var divClasses=['checkbox', 'mb-3'];
+            //div(class=divClasses)
+            //    label
+            //        input(type="checkbox" value="remember-me")
+            //        span Remember me  
+			  
+            input(type="submit" name="submit" value="Send FIL" id="submit" class="form-control" ) 

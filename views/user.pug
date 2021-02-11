@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 User Info
+  h3 id: #{id}
+  h3 token: #{token}
+  p.lead Wallet address information for the user  
+  hr
+  .row
+    .col-sm-16
+    each address, i in addressesList
+        div
+          br
+          h2= 'Address ' + i
+          ul
+            li= 'Name: ' + address.name
+            li= 'Address: ' + address.address
+            li= 'Type: ' + address.type
+            li= 'Balance: ' + address.balance

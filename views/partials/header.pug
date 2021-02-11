@@ -1,0 +1,38 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+
+  .container
+    a.navbar-brand(href='/')
+      img.branding 
+      span.gts   Powergate Node.js Project 
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+      span.navbar-toggler-icon 
+    .collapse.navbar-collapse
+      .dropdown-divider
+      ul.nav.navbar-nav
+        if !user
+          li.nav-item.dropdown(class=(title === 'Login') ? 'active' : undefined)
+            a#dropdown01.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Login
+            .dropdown-menu
+              a.dropdown-item(href='/auth/github') Login with GitHub
+              a.dropdown-item(href='/auth/google') Login with Google
+              a.dropdown-item(href='/auth/twitter') Login with Twitter
+        else
+          li.nav-item
+            a.nav-link(href='/logout') Logout
+     
+    ul.nav.navbar-nav.mr-auto
+      li.nav-item(class=(title === 'Home') ? 'active' : undefined)
+          a.nav-link(href='/') Home
+      if user
+          li.nav-item(class=(title.startsWith('Profile')) ? 'active' : undefined)
+            a.nav-link(href='/user') Profile #{user.email}
+          li.nav-item(class=(title.startsWith('Users')) ? 'active' : undefined)
+            a.nav-link(href='/users') Users  
+          li.nav-item(class=(title.startsWith('SendFIL')) ? 'active' : undefined)
+            a.nav-link(href='/sendfil') SendFIL  
+          li.nav-item(class=(title.startsWith('Pin')) ? 'active' : undefined)
+            a.nav-link(href='/pin') Pin  
+          li.nav-item(class=(title.startsWith('Deals')) ? 'active' : undefined)
+            a.nav-link(href='/deals') Deals  
+          li.nav-item(class=(title.startsWith('Jobs')) ? 'active' : undefined)
+            a.nav-link(href='/jobs') Jobs  

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  br
+  .row
+    h1 Cid Info 
+ 
+  .row
+    .col-sm-15
+      h2   
+      - const json = JSON.stringify(cidInfosList.cidInfo, null, 4)  
+      pre= json 
+	  
+  .row 
+        form(class="form-signin" method="POST" action="/cid_get")
+            #error
+                if error
+                    p.text-danger Error!!!
+
+            - var h1Classes = ['h3', 'mb-6', 'font-weight-normal']
+            h1(class=h1Classes) Get FILE  
+
+            //-input cid
+            label(for="inputCID" class="sr-only") Cid Id
+            input(type="text" name="CID" id="inputCID"  value=`${resCid}`  class="form-control" placeholder="insert CID" required)
+			 
+            label(for="inputFIL" class="sr-only") GET FILE
+            input(type="submit" name="submit" id="submit" class="form-control" )

@@ -1,0 +1,91 @@
+extends layout
+
+block content
+  h1 Pin Info
+  p.lead  JobId and Cid
+  hr
+  .row
+    .col-sm-6
+   
+     h1 Pin a file 
+      
+     form(action='/pin' method='post' class="form-horizontal" enctype='multipart/form-data')
+        input(type='file' id="file" name='target_file' class="form-control-file") 
+        button(type='submit' for="name" class='btn btn-primary') Upload
+				
+  if resCid				
+   hr
+   pre(id='status')
+   
+   script(type='text/javascript').
+     function ajaxCall() {
+       $.ajax({
+         type: 'POST',
+         timeout: 3000,
+         url : "/cid_info_ajax",
+         dataType: "text",
+         async:false,
+         crossDomain:false,
+         data: "CID=!{resCid}",
+         success: function (data) {
+         data_str = JSON.stringify(JSON.parse(data), null, 3);
+         $("#status").text(data_str);
+         },
+         error: function (data, textStatus, errorThrown) {
+           if(textStatus == "timeout") {
+           alert("Got timeout"); 
+         }
+       }
+      });
+     }
+	 
+     setInterval(ajaxCall,1000) 
+   hr
+   .row
+    .col-sm-6
+      h2 JobId
+      pre= resJobId
+   hr
+   .row
+    .col-sm-6
+      h2 Cid
+      pre= resCid
+   hr
+   .row
+    .col-sm-15
+      h2   
+      - const json = JSON.stringify(resInfo, null, 4)  
+      pre= json 
+  hr  
+  .row   
+    .col-sm-12 
+      div.text-center
+        form(class="form-signin" method="POST" action="/cid_info")
+            #error
+                if error
+                    p.text-danger Error!!!
+
+            - var h1Classes = ['h3', 'mb-6', 'font-weight-normal']
+            h1(class=h1Classes) Get CID Info 
+
+            //-input cid
+            label(for="inputCID" class="sr-only") Cid Id
+            input(type="text" name="CID" id="inputCID"  value=`${resCid}`  class="form-control" placeholder="insert CID" required)
+			 
+            label(for="inputFIL" class="sr-only") SEND
+            input(type="submit" name="submit" id="submit" class="form-control" )
+		
+        form(class="form-signin" method="POST" action="/cid_get")
+            #error
+                if error
+                    p.text-danger Error!!!
+
+            - var h1Classes = ['h3', 'mb-6', 'font-weight-normal']
+            h1(class=h1Classes) Get FILE  
+
+            //-input cid
+            label(for="inputCID" class="sr-only") Cid Id
+            input(type="text" name="CID" id="inputCID"  value=`${resCid}`  class="form-control" placeholder="insert CID" required)
+			 
+            label(for="inputFIL" class="sr-only") GET FILE
+            input(type="submit" name="submit" id="submit" class="form-control" )

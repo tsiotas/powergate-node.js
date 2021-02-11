@@ -1,0 +1,142 @@
+@import "themes/default/variables";
+
+@import "lib/bootstrap/bootstrap";
+@import "lib/font-awesome/font-awesome";
+
+@import "themes/default/default";
+
+// Scaffolding
+// -------------------------
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	padding-top: 80px;
+	margin-bottom: 75px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	p,
+	a,
+	ul {
+		margin-bottom: 6;    
+	}
+}
+
+// Input Fields
+// -------------------------
+
+textarea {
+	resize: vertical;
+}
+
+// Navbar
+// -------------------------
+
+.navbar-nav img {
+	width: 30px;
+	height: 30px;
+	margin: -15px 15px -15px;
+}
+
+// Alerts
+// -------------------------
+
+.alert {
+	margin-top: 20px;
+}
+
+// Thumbnails
+// -------------------------
+
+.thumbnail {
+	padding: 0;
+	border-radius: 0;
+	box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+}
+
+// Font Icons
+// -------------------------
+
+.fa {
+	margin-right: 6px;
+}
+
+// Custom
+// -------------------------
+
+img.branding {
+	width: 60px;
+	height: 60px;
+	margin-right: 6px;
+	background: url("/images/unibo.png");
+	background-size: cover!important; 
+}
+span.gts {
+	font-size: 1rem!important; 
+}
+.fa {
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+	opacity: 0.7;
+	text-decoration: none;
+}
+
+/* Set a specific color for each brand */
+
+/* GitHub */
+.fa-github {
+	color: #6c757d;
+}
+
+
+.navbar-expand-lg .navbar-collapse {
+    display: contents!important;
+}
+
+.nav { 
+	flex-wrap: nowrap!important;  
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 930px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

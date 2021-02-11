@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Node Users 
+  p.lead Users list of this Node  
+  hr
+  .row
+    .col-sm-6
+    each user_, i in userList.usersList
+        .container 
+        h2= 'User ' + i
+        ul
+          li= 'Id: ' + user_.id 
+          li= 'Token: ' + user_.token 

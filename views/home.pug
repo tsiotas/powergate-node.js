@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Node Info
+  p.lead Available data, no auth required.
+  hr
+  .row
+    - const jsonInfo = JSON.stringify(info, null, 4) 
+    - const jsonHost = JSON.stringify(host, null, 4) 
+    .col-sm-6
+      h2 Listen Address
+      pre= jsonHost
+    .col-sm-6
+      h2 Powergate Docker Version
+      pre= jsonInfo 

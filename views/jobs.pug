@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  h1 Node Jobs 
+  p.lead Jobs list of this Node  
+  hr
+  .row
+    .col-sm-6 
+    each job_, i in jobsList.storageJobsList
+        .container 
+        h2= 'Jobs ' + i
+        - const json = JSON.stringify(job_, null, 4)    
+        pre= json   
+	  
+    if jobsList.storageJobsList.length == 0 
+         h2.text-danger No Jobs
+  hr 
+  .row
+    .col-sm-6
+    each job_, i in jobsSummary.queuedStorageJobsList
+        .container 
+        h2= 'Queued Jobs ' + i 
+        - const json = JSON.stringify(job_, null, 4)  
+        pre= json 
+    if jobsSummary.queuedStorageJobsList.length == 0 
+         h2.text-danger No Queued Jobs
+  hr 
+  .row
+    .col-sm-6
+    each job_, i in jobsSummary.executingStorageJobsList
+        .container 
+        h2= 'Executing Jobs ' + i 
+        - const json = JSON.stringify(job_, null, 4)  
+        pre= json 
+    if jobsSummary.executingStorageJobsList.length == 0 
+         h2.text-danger No Executing Jobs
+  hr 
+  .row
+    .col-sm-6
+    each job_, i in jobsSummary.finalStorageJobsList
+        .container 
+        h2= 'Final Jobs ' + i
+        - const json = JSON.stringify(job_, null, 4)  
+        pre= json  
+    if jobsSummary.finalStorageJobsList.length == 0 
+         h2.text-danger No Final Jobs

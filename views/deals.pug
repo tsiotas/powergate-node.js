@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1 Node Deals 
+  p.lead Deals list of this Node   
+  hr
+  
+  .row
+    .col-sm-12
+    each deal_, i in dealsStorageList.recordsList
+        .container 
+        h2= 'Storage Deal ' + i
+        - const json = JSON.stringify(deal_, null, 4)  
+        pre= json 
+    if dealsStorageList.recordsList == 0 
+         h2.text-danger No Storage Deals
+  
+  hr
+  .row
+    .col-sm-12
+    each deal_, i in dealsRetrievalList.recordsList
+        .container 
+        h2= 'Retrieval Deal ' + i
+        - const json = JSON.stringify(deal_, null, 4)  
+        pre= json  
+    if dealsRetrievalList.recordsList == 0 
+         h2.text-danger No Retrieval Deals
+  hr
+  
+  .row
+    .col-sm-12
+    h2= 'Default Config Deal '   
+    - const json  = JSON.stringify(dealDefault, null, 4)
+    pre= json 
+  hr
