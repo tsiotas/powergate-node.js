@@ -4,17 +4,14 @@ This is a fork of  Textile + Node Starter Project [TypeScript-Node-Starter proje
 It's a simple project to test Powergate works with Filecoin architecture (Lotus + IPFS) in localnet
  
 ## Setup
-First of all you need clone the Powergate Docker from here  https://github.com/textileio/powergate/releases 
-For this project we used powergate v.2.0.0 
+First of all you need clone the Powergate Docker from here  https://github.com/textileio/powergate/releases in a different directory
+(for this project we used powergate v.2.0.0) 
 
-Run the powergate docker:
+### Run Powergate
 
-### Run Powergate docker
-
----
-make localnet 
 ```
-
+make localnet
+```
 
 ### Install
 
