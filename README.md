@@ -1,8 +1,17 @@
-# Textile + Node Starter Project
-
-This is a simple shell of a project using Node.js, Express, and Pug. It was originally based on the [TypeScript-Node-Starter project](https://github.com/microsoft/TypeScript-Node-Starter), then simplified, updated, and cleaned up a bit.
-
+# Powergate Node.js
+This is a fork of  Textile + Node Starter Project [TypeScript-Node-Starter project](https://github.com/microsoft/TypeScript-Node-Starter) 
+It's a simple project to test Powergate works with Filecoin architecture (Lotus + IPFS) in localnet
+ 
 ## Setup
+First of all you need clone the Powergate Docker from here  https://github.com/textileio/powergate/releases 
+For this project we used powergate v.2.0.0 
+
+Run the powergate docker:
+
+---
+make localnet 
+```
+
 
 ### Install
 
@@ -34,17 +43,14 @@ Replace each of the credentials for Twitter, Google, and GitHub that you setup a
 npm run build
 ```
 
-## Watch
-
-```
-npm run watch
-```
-
 ## Start
 
 ```
 npm run start
 ```
+
+# Authors
+Luca Lorello and Giorgio Tsiotas
 
 # License
 Copyright (c) Textile. All rights reserved.
