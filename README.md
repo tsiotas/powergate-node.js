@@ -12,15 +12,6 @@ Content in this project includes sections for:
 - Pin a file a seal deals 
 - get information about the file status or download it from the web page
  
-## Setup
-First of all you need clone the Powergate Docker from here  https://github.com/textileio/powergate/releases in a different directory
-(for this project we used powergate v.2.0.0) 
-
-### Run Powergate
-
-```
-make localnet
-```
 
 ### Install
 
@@ -50,6 +41,28 @@ Replace each of the credentials for Twitter, Google, and GitHub that you setup a
 
 ```
 npm run build
+```
+
+## Setup Powergate 
+First of all you need clone the Powergate Docker from here  https://github.com/textileio/powergate/releases in a different directory
+(for this project we used powergate v.2.0.0) 
+
+### Run Powergate
+
+```
+make localnet
+```
+
+you can have access to the docker instances of Powergate by: 
+
+```
+docker exec -it localnet_powergate_1 sh 
+```
+
+and use the powergate CLI apis:
+
+```
+./pow help
 ```
 
 ## Start
