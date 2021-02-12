@@ -58,6 +58,9 @@ npm run build
 npm run start
 ```
 
+The app will start on http://localhost:3000
+
+
 # Authors
 Luca Lorello and Giorgio Tsiotas
 
