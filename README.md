@@ -76,5 +76,4 @@ https://github.com/textileio/js-powergate-client/tree/master/examples/node
 
 
 # License
-Copyright (c) Textile. All rights reserved.
 Licensed under the [MIT](LICENSE.txt) License.
