@@ -61,6 +61,15 @@ npm run start
 # Authors
 Luca Lorello and Giorgio Tsiotas
 
+# References
+https://docs.textile.io/powergate/
+https://github.com/textileio/powergate/releases
+https://textileio.github.io/js-powergate-client
+https://blog.textile.io/integrating-powergate/
+https://www.npmjs.com/package/@textile/powergate-client
+https://github.com/textileio/js-powergate-client/tree/master/examples/node
+
+
 # License
 Copyright (c) Textile. All rights reserved.
 Licensed under the [MIT](LICENSE.txt) License.
