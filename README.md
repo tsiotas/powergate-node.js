@@ -64,6 +64,10 @@ Luca Lorello and Giorgio Tsiotas
 # References
 https://docs.textile.io/powergate/
 
+https://docs.filecoin.io 
+
+https://github.com/filecoin-project/
+
 https://github.com/textileio/powergate/releases
 
 https://textileio.github.io/js-powergate-client
